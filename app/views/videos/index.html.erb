@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="span12">
+          <table class="table">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Email</th>
+                      <th>Message</th>
+                      <th>State</th>
+                      <th>Video URL</th>
+                      <th>Fecha creación</th>
+                      <th>Fecha inicio conversión</th>
+                      <th>Fecha fin conversión</th>
+                      <th>Video Converted URL</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% @videos.each do |video| %>
+                    <tr>
+                      <td><%= video.id  %></td>
+                      <td><%= video.email  %></td>
+                      <td><%= video.message %></td>
+                      <td><%= video.state %></td>
+                      <td><%= video.video.url %></td>
+                      <td><%= video.created_at %></td>
+                      <td><%= video.converted_at %></td>
+                      <td><%= video.converted_finished_at %></td>
+                      <td><%= video.video_converted.url %></td>
+                    </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+        </div>
+    </div>
+</div>

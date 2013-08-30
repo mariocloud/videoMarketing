@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  video: MyString
+  messsage: MyString
+  converted_at: 2013-08-16 00:18:27
+  state: MyString
+
+two:
+  video: MyString
+  messsage: MyString
+  converted_at: 2013-08-16 00:18:27
+  state: MyString
