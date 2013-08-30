@@ -2,6 +2,8 @@ VideoMarketing::Application.routes.draw do
 
   resources :videos
 
+  match "/delayed_job" => DelayedJobWeb, :anchor => false
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class VideosController < ApplicationController
   def new
     @video = Video.new
@@ -7,7 +8,7 @@ class VideosController < ApplicationController
     @video = Video.new(params[:video])
     @video.state = Video::PROCESSING_STATE
     if @video.save
-      flash[:success] = 'El video ha sido procesado exitosamente.'
+      flash[:success] = 'Hemos recibido el video y muy pronto será revisado y publicado. Gracias por participar del concurso.'
       redirect_to root_path
     else
       flash[:error] = 'Error cargando el video.'

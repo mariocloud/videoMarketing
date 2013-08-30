@@ -18,6 +18,10 @@ class Video < ActiveRecord::Base
   after_save :convert_video
 
   def convert_video
+    self.delay.process_video
+  end
+
+  def process_video
     if self.converted_at.nil?
       self.converted_at = Time.zone.now
       self.video.cache_stored_file!
